@@ -19,5 +19,31 @@
 
         </div>
     </div>
+    <script>
+        const x = document.querySelector(".hour");
+        const y = document.querySelector(".minute");
+        const z = document.querySelector(".second");
+
+        function setDate() {
+            const now = new Date()
+
+            const hours = now.getHours()
+            const A = (hours / 12) * 360 + 90;
+            x.style.transform = `rotate(${A}deg)`;
+
+
+            const minutes = now.getMinutes()
+            const B = (minutes / 60) * 360 + 90;
+            y.style.transform = `rotate(${B}deg)`;
+
+
+            const seconds = now.getSeconds()
+            const C = (seconds / 60) * 360 + 90;
+            z.style.transform = `rotate(${C}deg)`;
+        }
+
+        setInterval(setDate, 1000);
+        setDate();
+    </script>
 </body>
 </html>

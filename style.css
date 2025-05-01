@@ -1,0 +1,106 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #223442;
+}
+
+.clock {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background-color: #223442;
+    position: relative;
+    box-shadow: 0 2px 20px 5px rgba(0,0,0,0.3);
+    border: 10px double #fff;
+}
+
+.clock::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 26px;
+    transform: translate(-50%,-50%);
+}
+
+.hour {
+    width: 150px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 100% 50%;
+    transform: translate(-50%,-50%) rotate(90deg);
+
+}
+
+.minute {
+    width: 150px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 100% 50%;
+    transform: translate(-50%,-50%) rotate(90deg);
+}
+
+.second {
+    width: 150px;
+    height: 2px;
+    background-color: red;
+    border-radius: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 100% 50%;
+    transform: translate(-50%,-50%) rotate(90deg);
+}
+
+.num1 {
+    font-family: montserrat;
+    position: absolute;
+    top: -170px;
+    color: #fff;
+    left: 140px;
+    font-weight: 900;
+}
+
+.num2 {
+    position: absolute;
+    right: -312px;
+    color: #fff;
+    font-family: montserrat;
+    font-weight: 900;
+}
+
+.num3 {
+    font-family: montserrat;
+    position: absolute;
+    top: 150px;
+    color: #fff;
+    left: 140px;
+    font-weight: 900;
+}
+
+.num4 {
+    position: absolute;
+    color: #fff;
+    font-family: montserrat;
+    font-weight: 900;
+}
